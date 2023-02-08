@@ -16,8 +16,10 @@ jobs:
       - image: cicleci/node:13.8.0
     steps:
       - run: 
-          echo "World"
+          name: "What branch am I on now?"
           command: echo ${CIRCLE_BRANCH}
+
+          name: "What's My name?""
           command: echo $NAME
           environment:
             NAME: Samuel Ato Baiden
