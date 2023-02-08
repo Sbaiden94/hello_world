@@ -16,11 +16,11 @@ jobs:
       - image: cicleci/node:13.8.0
     steps:
       - run: 
-           echo "World"
-           command: echo ${CIRCLE_BRANCH}
-           command: echo $NAME
-           environment:
-             NAME: Samuel Ato Baiden
+          echo "World"
+          command: echo ${CIRCLE_BRANCH}
+          command: echo $NAME
+          environment:
+            NAME: Samuel Ato Baiden
         
   #say-hello:
     # Specify the execution environment. You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
