@@ -9,21 +9,10 @@ jobs:
     docker:
       - image: cicleci/node:13.8.0
     steps:
-      - run: echo "Hello"
-
-  print_world:
-    docker:
-      - image: cicleci/node:13.8.0
-    steps:
-      - run: 
-          name: "What branch am I on now?"
+      - run: # print the name of the branch we're on
+          name: "What branch am I on?"
           command: echo ${CIRCLE_BRANCH}
 
-          name: "What's My name?""
-          command: echo $NAME
-          environment:
-            NAME: Samuel Ato Baiden
-        
   #say-hello:
     # Specify the execution environment. You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
     # See: https://circleci.com/docs/2.0/configuration-reference/#docker-machine-macos-windows-executor
@@ -43,7 +32,4 @@ workflows:
   welcome:
     jobs:
       - print_hello
-      - print_world:
-          requires: 
-            - print_hello
 
