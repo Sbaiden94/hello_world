@@ -11,7 +11,7 @@ jobs:
     steps:
       - run: echo "Hello World" > output.txt
       - persist_to_workspace:
-          root: /tmp/
+          root: ~/
           paths:
             - output.txt
 
@@ -20,8 +20,8 @@ jobs:
       - image: alpine:latest 
     steps:
       - attach_workspace:
-           at: /tmp/
-      - run: cat /tmp/output.txt
+           at: ~/
+      - run: cat ~/output.txt
 
   #say-hello:
     # Specify the execution environment. You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
