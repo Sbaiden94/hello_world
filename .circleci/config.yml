@@ -20,11 +20,6 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - print_pipeline_id
-#jobs:
-  #save_hello_world_output:
-    #docker:
-      #- image: circleci/node:13.8.0
-    steps:
       - run: echo "Hello World" > output.txt
       - persist_to_workspace:
           root: ~/
