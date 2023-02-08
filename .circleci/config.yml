@@ -35,7 +35,7 @@ jobs:
     #docker: 
       #- image: circleci/node:13.8.0 
       - run: echo "First test failed"
-          when: on_fail
+        when: on_fail
            #at: ~/
       #- run: cat ~/output.txt
 
